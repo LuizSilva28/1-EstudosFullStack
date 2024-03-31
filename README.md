@@ -1,0 +1,1 @@
+Área dedicada ao Estudo!
