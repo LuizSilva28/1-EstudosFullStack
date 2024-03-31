@@ -1,0 +1,40 @@
+@mixin tetx-style($color, $background-color, $font-size, $font-family) {
+  color: $color;
+  background-color: $background-color;
+  font-size: $font-size;
+  font-family: $font-family;
+}
+
+.texts {
+  h1 {
+    @include tetx-style(#ff4043, darkgray, 34px, Arial);
+  }
+  p {
+    @include tetx-style(blue, darkgray, 22px, sans-serif);
+  }
+  h3 {
+    @include tetx-style(green, darkgray, 18px, sans-serif);
+  }
+}
+
+//sem o Mixin
+/*.texts {
+    h1 {
+      color: #ff4043;
+      background-color: darkgray;
+      font-size: 34px;
+      font-family: Arial;
+    }
+    p {
+      color: blue;
+      background-color: darkgray;
+      font-size: 22px;
+      font-family: sans-serif;
+    }
+    h3 {
+      color: green;
+      background-color: darkgray;
+      font-size: 18px;
+      font-family: sans-serif;
+    }
+  };*/

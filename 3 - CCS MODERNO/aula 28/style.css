@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  border: 2px solid black;
+  width: 100%;
+}
+.footer {
+  border: 2px solid black;
+  width: 100%;
+}
+
+.content {
+  padding: 20px;
+  display: grid;
+}
+
+.item {
+  border: 2px solid black;
+}
