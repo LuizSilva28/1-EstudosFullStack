@@ -1,1 +1,1 @@
-<h1>Área dedicada ao Estudo!</h1>
+<h1 style="color:blue">Área dedicada ao Estudo!</h1>
