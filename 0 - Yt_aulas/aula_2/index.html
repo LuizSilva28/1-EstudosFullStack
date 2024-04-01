@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+<link rel="stylesheet" href="./style.css ">
+  <title>App de geração de mensagem do dia com modal e geraçãode PNG</title>
+</head>
+
+<body>
+  <main class="tela-principal">
+    
+    <!--Abrir Modal-->
+    <div id="abrirModal" class="modal">
+  
+     <div>
+        <a href="#fechar" title"fechar" class="fechar" >x</a>
+      <h1>Aviso</h1>
+      <p>
+        É obrigatório escolher uma data, uma citação e autoria antes de postar.
+      </p>
+    
+     </div>
+    </div>
+    
+    <section class="sectionForm">
+      <h1>App mensagem do </h1>
+      <p id="aviso">seu app de mensagem do dia</p>
+      <form id="formulario">
+        
+        <div class="form-group">
+          <label for="data">data</label>
+          <input type="date" id="data" name="data" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="citacao">citação</label>
+          <textarea name="citacao" id="citacao" cols="30" rows="3" placeholder="Digite a sua citação aqui!" required autofocus ></textarea>
+          
+        </div>
+        
+        <div class="form-group">
+          <label for="autoria">autoria</label>
+          <input type="text" id="autoria" name="autoria" placeholder="Digite o nome do(a) autor(a) aqui!">
+          
+        </div>
+        
+        <div id="divBotoes" class="form-group">
+          
+        <button type="button" id="bntCriar" class="bnt" onclick="criarCitacao()">Criar</button>
+        
+        <button type="reset" id="bntLimpar" class="bnt">
+          Limpar
+        </button>
+
+        </div>
+      </form >
+    </section>
+    
+    <p id="aviso2"></p>
+    
+    <section class="conteudos">
+      <article id="citacao00" class="citacao fundo1">
+        <h2></h2>
+        <blockquote>
+          
+        </blockquote>
+        <span></span>
+        
+      </article>
+      
+      <div id="exemplos" style="display: none">
+        
+      </div>
+    </section>
+    
+  <main>
+  <script src="./main.js"></script>
+</body>
+</html>
