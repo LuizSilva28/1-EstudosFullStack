@@ -97,10 +97,34 @@ function abrirModal() {
     location.href="#abrirModal"
 }
 
+function gerarNumero() {  
+   
+   var numeroAleatorio = Math.random() * 5;  
+   
+   numeroAleatorio = Math.floor(numeroAleatorio); 
+   
+   console.log(numeroAleatorio);
+   
+   return numeroAleatorio;
+   
+   
+}
+ 
+ 
 function criarMensagem(data, citacao, autoria) {
+   
     dataCitacao.textContent    = data
     textoCitacao.textContent   = citacao
     autoriaCitacao.textContent = autoria
+    
+    let numeroGerado = gerarNumero();
+    
+    let conteudoArticle = document.getElementById('citacao00');
+   
+   conteudoArticle.classList = ( `fundo${numeroGerado}`, 'citacao')
+   
+
+
 
     download()
 }

@@ -133,7 +133,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .fundo1 {
-    background-image:url('../images/fundos/textura.jpg');
+    background-image:url('./images/fundos/textura.jpg');
     color: #663300;
     text-shadow: 0 0 5px #fff;
 }
