@@ -103,13 +103,15 @@ function gerarNumero() {
    
    numeroAleatorio = Math.floor(numeroAleatorio); 
    
+   console.log('numero gerado' + numeroAleatorio)
+   if ( numeroAleatorio < 1){
+      numeroAleatorio = 1; 
+      console.log( 'numero alterado pelo if' + numeroAleatorio)
+   }
    console.log(numeroAleatorio);
    
    return numeroAleatorio;
-   
-   
 }
- 
  
 function criarMensagem(data, citacao, autoria) {
    
@@ -120,11 +122,11 @@ function criarMensagem(data, citacao, autoria) {
     let numeroGerado = gerarNumero();
     
     let conteudoArticle = document.getElementById('citacao00');
-   
-   conteudoArticle.classList = ( `fundo${numeroGerado}`, 'citacao')
-   
 
-
+    conteudoArticle.classList.add('citacao');
+    conteudoArticle.classList.add(`fundo${numeroGerado}`);
+   
+   
 
     download()
 }
