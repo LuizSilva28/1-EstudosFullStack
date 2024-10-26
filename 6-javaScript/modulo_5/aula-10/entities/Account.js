@@ -2,10 +2,12 @@ const Deposit = require("./Deposit");
 const Loan = require("./Loan");
 const Transfer = require("./Transfer");
 
-class Account {
+module.exports = class Account {
 	#balance = 0;
-	constructor() {
+	#accountOwner;
+	constructor(user) {
 		this.#balance;
+		this.#accountOwner = user;
 		this.allDeposits = [];
 		this.allLoans = [];
 		this.allTransfer = [];
@@ -51,23 +53,15 @@ class Account {
 
 		this.allTransfer.push(transfer);
 
-		if (forUser) {
-			this.#balance += amountTransfer;
-		} else if (fromUser) {
+		if (fromUser === this.#accountOwner) {
 			this.#balance -= amountTransfer;
+		} else if (forUser === this.#accountOwner) {
+			this.#balance += amountTransfer;
 		} else {
 			console.log(console.error("a transferencia falhou!"));
 		}
 	}
 }
 
-const luiz = new Account();
-console.log(luiz);
 
-luiz.newDeposit(3);
 
-luiz.newLoan(10, 2);
-
-const checkBalance = luiz.checkBalance;
-console.log(checkBalance);
-console.log(luiz);

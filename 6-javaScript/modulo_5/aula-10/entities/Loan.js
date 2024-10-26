@@ -1,5 +1,5 @@
 module.exports = class Loan {
-	static #interestRate;
+	static #interestRate = 0.05;
 
 	constructor(loanAmount, dateLoan, loanInstallments) {
 		this.loanAmount = loanAmount;
@@ -12,8 +12,7 @@ module.exports = class Loan {
 	}
 
 	static set setInterestRate(percentageToRate) {
-		return (Loan.#interestRate =
-			this.loanAmount * (percentageToRate / 100));
+		return (Loan.#interestRate = percentageToRate / 100);
 	}
 }
 
