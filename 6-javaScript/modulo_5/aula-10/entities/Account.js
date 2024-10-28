@@ -4,17 +4,29 @@ const Transfer = require("./Transfer");
 
 module.exports = class Account {
 	#balance = 0;
-	#accountOwner;
-	constructor(user) {
-		this.#balance;
-		this.#accountOwner = user;
+	#accountOwner = null;
+	constructor() {
+		this.#balance = 0;
+		this.#accountOwner;
 		this.allDeposits = [];
 		this.allLoans = [];
 		this.allTransfer = [];
 	}
 
+	accountOwner(user) {
+		this.#accountOwner = user;
+	}
+
 	get checkBalance() {
 		return this.#balance;
+	}
+
+	updateBalance(verification, amount) {
+		if (verification) {
+			this.#balance += amount;
+		} else {
+			this.#balance -= amount;
+		}
 	}
 
 	static currentDate() {
@@ -31,7 +43,7 @@ module.exports = class Account {
 		const depositDate = Account.currentDate();
 		const deposit = new Deposit(depositAmount, depositDate);
 		this.allDeposits.push(deposit);
-		this.#balance += depositAmount;
+		this.updateBalance(true, depositAmount);
 	}
 
 	newLoan(loanAmount, loanInstallments) {
@@ -39,7 +51,7 @@ module.exports = class Account {
 
 		const loan = new Loan(loanAmount, loanDate, loanInstallments);
 		this.allLoans.push(loan);
-		this.#balance += loanAmount;
+		this.updateBalance(true, loanAmount);
 	}
 
 	newTransfer(fromUser, forUser, amountTransfer) {
@@ -54,14 +66,12 @@ module.exports = class Account {
 		this.allTransfer.push(transfer);
 
 		if (fromUser === this.#accountOwner) {
-			this.#balance -= amountTransfer;
+			this.updateBalance(false, amountTransfer);
+			forUser.account.updateBalance(true, amountTransfer);
 		} else if (forUser === this.#accountOwner) {
-			this.#balance += amountTransfer;
+			this.updateBalance(true, amountTransfer);
 		} else {
 			console.log(console.error("a transferencia falhou!"));
 		}
 	}
-}
-
-
-
+};

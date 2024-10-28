@@ -1,37 +1,40 @@
-const Account = require("./entities/Account");
-const Deposit = require("./entities/Deposit");
-const Loan = require("./entities/Loan");
-const User = require("./entities/User");
+const Account = require("./Account");
+const Deposit = require("./Deposit");
+const Loan = require("./Loan");
+const User = require("./User");
 
-module.exports = class App {
+module.exports  = class App {
 	static #userList = [];
+
+	static exibirLisaDeUsuario() {
+		return this.#userList;
+	}
 
 	static createNewUser(userName, email) {
 		const exists = App.searchByUser(email);
-		if (exists === false) {
+		
+		//console.log(exists[0]?.email);
+		if (exists[0]?.email !== email) {
+			const account = new Account();
 			const user = new User(userName, email, account);
-			const account = new Account(user);
-		} else if (exists === true) {
+			account.accountOwner(user);
+			App.#userList.push(user);
+
+			return user;
+		} else if (exists[0]?.email == email) {
 			console.log(
-				"Este email já está sendo utilizado por outro usuário!"
+				`O email ${email} já está sendo utilizado por outro usuário!`
 			);
 		}
 	}
 
 	static searchByUser(email) {
 		const searchResult = this.#userList.filter((user) => {
-			return user?.email == email;
+			return user.email == email;
 		});
 
 		return searchResult;
-		/*
-            const searchResult = users.filter(checkEmail);
-            function checkEmail(user) {
-                const userEmail = "douglas@gmail.com";
-	            return user?.email === userEmail;
-            }
-            console.log(searchResult);
-        */
+		
 	}
 
 	static deposit(email, amount) {
@@ -49,11 +52,12 @@ module.exports = class App {
 		user.account.newLoan(loanAmount, loanInstallments);
 	}
 
-	static loanRate( percentageToRate) {
-        /*const user = App.searchByUser(email);
+	static loanRate(percentageToRate) {
+		/*const user = App.searchByUser(email);
         user.newLoan(loanAmount, loanInstallments);*/
-        
+
 		const newRate = new Loan();
 		newRate.setInterestRate(percentageToRate);
 	}
-};
+}
+

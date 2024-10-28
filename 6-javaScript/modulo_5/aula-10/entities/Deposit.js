@@ -3,7 +3,4 @@ module.exports = class Deposit {
 		this.amount = amount;
 		this.date = date;
 	}
-
-	
-
 };
