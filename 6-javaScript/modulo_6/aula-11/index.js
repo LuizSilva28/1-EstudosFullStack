@@ -1,10 +1,10 @@
 function calculationIMC(weight, height) {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
-			if (typeof weight || typeof height !== "number") {
+			if (typeof weight !== "number" || typeof height !== "number") {
 				reject("Ambos os valores devem ser numeros!");
 			} else if (typeof weight || typeof height === "number") {
-				const IMC = weight / (height ** 2);
+				const IMC = weight / height ** 2;
 				resolve(IMC);
 			}
 		}, 1000 * 2);
@@ -39,4 +39,4 @@ function callIMCCalculation(weight, height) {
 	}, 1000 * 3);
 }
 
-callIMCCalculation(80, "1.82");
+callIMCCalculation(80, 1.82);
