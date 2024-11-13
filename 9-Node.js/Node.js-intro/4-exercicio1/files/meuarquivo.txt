@@ -1,0 +1,2 @@
+Conteúdo inicial di arquivo. 
+Criado com o modulo fs do Node.jsConteúdo modificado!
