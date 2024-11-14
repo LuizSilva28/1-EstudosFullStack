@@ -5,7 +5,7 @@ const exists = fs.existsSync(fileName);
 if (exists) {
 	fs.readFile(fileName, "utf-8", (error, data) => {
 		if (error) {
-			console.log("Erro ao ler o arquivo: ", error.cause.message);
+			console.log("Erro ao ler o arquivo: ", error.message);
 			return;
 		}
 		const entries = data.split(",");
