@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Titulo</title>
+	</head>
+	<body>
+		<section class="membersArea">
+			<h1>Bem vidno a area de membros!</h1>
+			<br />
+			<p>Aqui estão presentes todos os nossos membros</p>
+
+			<ul id="ul-list">
+				<% emails.forEach(email => { %>
+
+				<li>Email: <%= email %></li>
+				<br />
+				<form
+					action="/members/delete"
+					method="post">
+					<input
+						type="hidden"
+						name="email"
+						value="<%= email %>" />
+					
+					<button
+						type="submit"
+						class="bnt-delete">
+						Excluir
+					</button>
+				</form>
+
+				<% }); %>
+			</ul>
+			
+		</section>
+	</body>
+</html>
