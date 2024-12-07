@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="/styles/bootstrap.css" />
+		<title>Todas Tarefas</title>
+	</head>
+	<body class="d-flex flex-column align-items-center bg-primary-subtle">
+		<%- include('partials/header') %>
+
+		<section class="d-flex flex-column justify-content-center vh-100">
+			<div class="rounded-3 shadow-lg p-4">
+				<h1 class="m-4">Criar as tarefas</h1>
+
+				<form
+					action="/createTask"
+					method="post"
+					class="my-3">
+					<div class="createTasks-title my-3">
+						<label
+							for="title"
+							class="fs-4"
+							>Titulo:</label
+						>
+						<br />
+						<input
+							type="text"
+							name="title"
+							id="title"
+							placeholder="Meu dia no trabalho" />
+					</div>
+
+					<div class="createTasks-content my-3">
+						<div id="dynamic-elements">
+							<label
+								for="content"
+								class="fs-4"
+								>Conteudo:</label
+							>
+
+							<br />
+
+							<input
+								name="content"
+								id="content"
+								placeholder="Meu dia no trabalho foi bom..."
+								class="w-100" />
+
+							<input
+								type="hidden"
+								name="status"
+								value="false" />
+							<input
+								type="checkbox"
+								name="status"
+								value="true" />
+						</div>
+						<button
+							type="button"
+							id="bnt-creteTask">
+							+
+						</button>
+					</div>
+					<button
+						type="submit"
+						class="bg-success fs-5 rounded-2 text-light">
+						Criar tarefa
+					</button>
+				</form>
+			</div>
+		</section>
+
+		<script>
+			const bntCreteTask = document.querySelector("#bnt-creteTask");
+			bntCreteTask.addEventListener("click", (ev) => {
+				ev.preventDefault;
+				createTask();
+			});
+			function createTask() {
+				const inputTask = document.createElement("input");
+				inputTask.setAttribute("name", "content");
+				inputTask.placeholder = "Digite aqui...";
+				inputTask.classList.add("w-100", "mt-2");
+
+				const inputCheckbox = document.createElement("input");
+				inputCheckbox.setAttribute("type", "checkbox");
+				inputCheckbox.setAttribute("name", "status");
+				inputCheckbox.setAttribute("value", "true");
+				
+				const inputCheckboxHidden = document.createElement("input");
+				inputCheckboxHidden.setAttribute("type", "hidden");
+				inputCheckboxHidden.setAttribute("name", "status");
+				inputCheckboxHidden.setAttribute("value", "false");
+
+				document
+					.getElementById("dynamic-elements")
+					.append(inputTask, inputCheckbox, inputCheckboxHidden);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+            <link
+			rel="stylesheet"
+			href="/styles/bootstrap.css" />
+
+		<title>Todas Tarefas</title>
+	</head>
+	<body class="bg-primary-subtle">
+        
+        <%- include('partials/header') %>
+
+		<h1 class="m-4">Todas as tarefas:</h1>
+        <section class="d-flex">
+            <% allTasks.forEach((task) => { %>
+                 <div class=" border border-3 border-dark rounded-2 m-2  w-25 text-dark-emphasis">
+                   <a href="/tasks/<%= task.id %>" class="text-dark text-decoration-none">
+                    <div data-formTask="tasks">
+                        <h3 class=" p-2 rounded-top-1 bg-warning"> <%= task.title %></h3>
+                        <p class="text-black mx-1"> 
+                           Criado em:  <%= task.createdAt %>
+                        </p>
+                        <p class="text-black mx-1">
+                           Atualizado em: <%= task.updatedAt %>
+                        </p>
+                    </div>
+                    </a>
+                    
+
+                    <form action="/createTask/delete/<%= task.id %>"  method="post"  class="d-flex  justify-content-center w-100 p-1 ">
+
+                        <button type="submit" class="bg-danger text-light rounded-2">Excluir</button>
+                    </form>
+                </div>
+            <% });%>
+
+            <script src="/scripts/allTasks.js"></script>
+	</body>
+</html>

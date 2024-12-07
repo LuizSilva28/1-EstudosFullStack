@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="/styles/bootstrap.css" />
+
+		<title>Todas Tarefas</title>
+	</head>
+	<body class="d-flex flex-column align-items-center bg-primary-subtle">
+		<%- include('partials/header') %>
+
+		<section class="d-flex flex-column justify-content-center vh-100">
+			<div class="rounded-3 shadow-lg p-4">
+				<h1 class="m-3">Minha tarefa</h1>
+				<form
+					action="/createTask/update/<%= task.id %>"
+					method="post"
+					class="my-4">
+					<div class="myTask">
+						<input
+							type="text"
+							name="title"
+							id="title"
+							value="<%= task.title %>"
+							class="my-2 px-1 rounded-2 border-1" />
+
+						<br />
+
+						<% task.tasks.forEach((el)=>{%>
+
+						<input
+							name="content"
+							id="content"
+							value="<%= el.content %> "
+							class="my-3 px-1 rounded-2 border-1" />
+
+						<% if (el.status === "false") { %>
+						<input
+							data-formMytask="myTask"
+							type="checkbox"
+							name="status"
+							id="status" />
+						<% } else if (el.status === "true") { %>
+						<input
+							data-formMytask="myTask"
+							type="checkbox"
+							checked
+							name="status"
+							id="status" />
+						<% } %>
+						<br />
+						<% }) %>
+
+						<button
+							type="button"
+							class="bg-success fs-5 rounded-2 bg-dark-subtle text-black">
+							+
+						</button>
+						<br />
+						<button
+							type="submit"
+							class="bg-success mx-3 fs-5 rounded-2 text-light">
+							Salvar alteração
+						</button>
+					</div>
+				</form>
+			</div>
+		</section>
+		<!-- <script src="/scripts/task.js"></script> -->
+	</body>
+</html>
