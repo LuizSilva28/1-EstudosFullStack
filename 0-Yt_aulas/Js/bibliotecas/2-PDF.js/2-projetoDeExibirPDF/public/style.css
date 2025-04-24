@@ -1,0 +1,12 @@
+body {
+	background-color: #d44f4f;
+}
+.color {
+	color: aliceblue;
+}
+.containerCanvas {
+	height: 20rem;
+	width: 100%;
+overflow: scroll;
+	background-size: contain;
+}
