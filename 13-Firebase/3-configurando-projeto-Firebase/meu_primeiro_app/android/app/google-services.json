@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "65944039171",
+    "project_id": "meu-primeiro-projeto-fc66d",
+    "storage_bucket": "meu-primeiro-projeto-fc66d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65944039171:android:7eb0fc4c51fafa2b4d4336",
+        "android_client_info": {
+          "package_name": "meu.primeiro.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0wC2HL92RcRcjP1mLMAWSuHdppKsonUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
