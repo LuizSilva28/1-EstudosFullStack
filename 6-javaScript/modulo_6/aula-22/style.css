@@ -1,0 +1,68 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	background-color: rgba(5, 5, 5, 0.877);
+	color: rgb(233, 208, 45);
+	padding-top: 2rem;
+}
+
+section {
+	margin: 2rem;
+	text-align: start;
+	background-color: rgb(32, 66, 5);
+	padding: 1rem;
+	border-radius: 0.8rem;
+
+	h1 {
+		font-size: 2rem;
+		margin: 0 1rem 1rem 1rem;
+	}
+	h2 {
+		margin: 1rem 1rem 1rem 0;
+	}
+	label {
+		font-size: 1.2rem;
+		color: azure;
+		margin: 1rem 1rem 1rem 0;
+	}
+
+	input {
+		background-color: transparent;
+		border: none;
+		border-bottom: 2px solid azure;
+		&:hover {
+			border: 1px solid rgb(233, 208, 45);
+		}
+	}
+
+	.bnt {
+		display: block;
+		height: 2rem;
+		width: 4rem;
+		margin: 1rem auto 1rem auto;
+		background-color: aqua;
+		color: rgb(0, 0, 0);
+		font-weight: 600;
+		border: none;
+		border-radius: 0.5rem;
+	}
+
+	#buttonSave {
+		transition: 1s;
+		&:hover {
+			box-shadow: 1px 1px 10px 2px rgb(104, 205, 27);
+			transition: 1s;
+		}
+	}
+
+	.bntDelete {
+		background-color: rgb(187, 93, 52);
+		color: rgb(255, 255, 255);
+	}
+}

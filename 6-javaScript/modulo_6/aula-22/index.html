@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="style.css" />
+
+		<title>Finanças Pessoais - exercicio</title>
+	</head>
+	<body>
+		<section>
+			<h1>Finanças Pessoais</h1>
+			<h2>Adicionar aos guardados:</h2>
+			<form
+				action="http://localhost:3000/transations"
+				method="Post"
+				data-mainForm="mainForm">
+				<label for="name">Nome: </label>
+				<input
+					type="text"
+					id="name"
+					data-idForm="NameForm" />
+				<br />
+				<br />
+
+				<label for="value">Valor: </label>
+				<input
+					type="number"
+					id="value"
+					data-idForm="ValueForm" />
+				<br />
+				<br />
+
+				<button
+					type="submit"
+					id="buttonSave"
+					class="bnt">
+					Salvar:
+				</button>
+			</form>
+		</section>
+		<section id="showAllTransactions"></section>
+
+		<script src="index.js"></script>
+	</body>
+</html>
