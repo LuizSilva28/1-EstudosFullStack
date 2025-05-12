@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/paginas/produtos_pages.dart';
+import 'package:flutter_widgets/listas/listas_page.dart';
+import 'package:flutter_widgets/paginas/pessoa_page.dart';
 
 class HomeBotoes extends StatelessWidget {
   const HomeBotoes({super.key});
@@ -14,6 +15,7 @@ class HomeBotoes extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Image.asset('assets/images/wano.jpg'),
             ElevatedButton(
               onPressed: () {
                 // Navigator.of(
@@ -42,6 +44,22 @@ class HomeBotoes extends StatelessWidget {
                 Navigator.of(context).pushNamed('/categorias');
               },
               child: Text("Categorias"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(
+                  context,
+                ).push(MaterialPageRoute(builder: (_) => PessoaPage()));
+              },
+              child: Text("Pessoa"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(
+                  context,
+                ).push(MaterialPageRoute(builder: (_) => ListasPage()));
+              },
+              child: Text("Listas"),
             ),
           ],
         ),

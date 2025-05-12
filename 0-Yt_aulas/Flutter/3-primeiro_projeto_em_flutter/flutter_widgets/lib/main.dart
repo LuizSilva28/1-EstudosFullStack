@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/home2_page.dart';
 import 'package:flutter_widgets/home_botoes.dart';
-import 'package:flutter_widgets/home_page.dart';
 import 'package:flutter_widgets/paginas/categorias_page.dart';
 import 'package:flutter_widgets/paginas/produtos_pages.dart';
 
