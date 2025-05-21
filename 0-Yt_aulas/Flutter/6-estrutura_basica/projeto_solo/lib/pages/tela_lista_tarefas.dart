@@ -22,10 +22,7 @@ class TelaListaTarefas extends StatelessWidget {
           ),
         ],
       ),
-      drawer: Drawer(  
-
-
-        
+      drawer: Drawer(
         child: ListView(
           children: [
             ListTile(
@@ -35,12 +32,22 @@ class TelaListaTarefas extends StatelessWidget {
           ],
         ),
       ),
-      body: ListView(
-        children: [
-          ListTile(title: Text('Comprar Leite')),
-          ListTile(title: Text('Estudar Flutter')),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ListView(
+              children: [
+                ListTile(title: Text('Comprar Leite')),
+                ListTile(title: Text('Estudar Flutter')),
+              ],
+            ),
+            Row(children: [
+                
+              ],),
+          ],
+        ),
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
