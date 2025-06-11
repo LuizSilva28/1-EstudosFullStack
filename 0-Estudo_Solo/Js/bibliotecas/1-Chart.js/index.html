@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="containerChartAndLegend">
+			<div class="graficoContainer">
+				<canvas
+				id="polarAreaChart"
+				class="grafico"></canvas>
+			</div>
+			<div id="legend-container"></div>
+		</div>
+		<br />
+		<div id="chartjs-tooltip"></div>
+		<div
+			id="square"
+			class="square"></div>
+		<br />
+
+		<!-- <div class="grafico1">
+			<canvas id="dimensions"></canvas></div>
+		<br />
+
+		<div class="grafico1">
+			<canvas id="acquisitions"></canvas>
+		</div> -->
+
+		<script
+			type="module"
+			src="src/polarAreaChart.js"></script>
+
+		<!-- <script
+		type="module"
+		src="src/dimensions.js"></script>
+		<script
+		type="module"
+		src="src/acquisitions.js"></script> -->
+	</body>
+</html>

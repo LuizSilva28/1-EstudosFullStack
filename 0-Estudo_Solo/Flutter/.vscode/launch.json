@@ -1,0 +1,114 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+		{
+			"name": "projeto_solo",
+			"cwd": "6-estrutura_basica\\projeto_solo",
+			"request": "launch",
+			"type": "dart"
+		},
+		{
+			"name": "flutter_application_1",
+			"cwd": "1-instalando-flutter\\flutter_application_1",
+			"request": "launch",
+			"type": "dart"
+		},
+		{
+			"name": "flutter_application_1 (profile mode)",
+			"cwd": "1-instalando-flutter\\flutter_application_1",
+			"request": "launch",
+			"type": "dart",
+			"flutterMode": "profile"
+		},
+		{
+			"name": "flutter_application_1 (release mode)",
+			"cwd": "1-instalando-flutter\\flutter_application_1",
+			"request": "launch",
+			"type": "dart",
+			"flutterMode": "release"
+		},
+		{
+			"name": "primeiro_projeto_flutter",
+			"cwd": "2-primiero_ccodigo_em_flutter\\primeiro_projeto_flutter",
+			"request": "launch",
+			"type": "dart"
+		},
+		{
+			"name": "primeiro_projeto_flutter (profile mode)",
+			"cwd": "2-primiero_ccodigo_em_flutter\\primeiro_projeto_flutter",
+			"request": "launch",
+			"type": "dart",
+			"flutterMode": "profile"
+		},
+		{
+			"name": "primeiro_projeto_flutter (release mode)",
+			"cwd": "2-primiero_ccodigo_em_flutter\\primeiro_projeto_flutter",
+			"request": "launch",
+			"type": "dart",
+			"flutterMode": "release"
+		},
+		{
+			"name": "flutter_widgets",
+			"cwd": "3-primeiro_projeto_em_flutter\\flutter_widgets",
+			"request": "launch",
+			"type": "dart"
+		},
+		{
+			"name": "flutter_widgets (profile mode)",
+			"cwd": "3-primeiro_projeto_em_flutter\\flutter_widgets",
+			"request": "launch",
+			"type": "dart",
+			"flutterMode": "profile"
+		},
+		{
+			"name": "flutter_widgets (release mode)",
+			"cwd": "3-primeiro_projeto_em_flutter\\flutter_widgets",
+			"request": "launch",
+			"type": "dart",
+			"flutterMode": "release"
+		},
+		{
+			"name": "exemplo1",
+			"cwd": "4-name-project-for-googleplay\\exemplo1",
+			"request": "launch",
+			"type": "dart"
+		},
+		{
+			"name": "exemplo1 (profile mode)",
+			"cwd": "4-name-project-for-googleplay\\exemplo1",
+			"request": "launch",
+			"type": "dart",
+			"flutterMode": "profile"
+		},
+		{
+			"name": "exemplo1 (release mode)",
+			"cwd": "4-name-project-for-googleplay\\exemplo1",
+			"request": "launch",
+			"type": "dart",
+			"flutterMode": "release"
+		},
+		{
+			"name": "projeto_solo",
+			"cwd": "6-estrutura_básica\\projeto_solo",
+			"request": "launch",
+			"type": "dart"
+		},
+		{
+			"name": "projeto_solo (profile mode)",
+			"cwd": "6-estrutura_básica\\projeto_solo",
+			"request": "launch",
+			"type": "dart",
+			"flutterMode": "profile"
+		},
+		{
+			"name": "projeto_solo (release mode)",
+			"cwd": "6-estrutura_básica\\projeto_solo",
+			"request": "launch",
+			"type": "dart",
+			"flutterMode": "release"
+		}
+	]
+}
