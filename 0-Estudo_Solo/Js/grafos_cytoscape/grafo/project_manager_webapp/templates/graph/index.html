@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Graph</title>
+
+        <link rel="stylesheet" href="{% static 'css/graph.css' %}">
+
+    </head>
+
+    <body>
+        <h1>Graph</h1>
+
+
+        <!-- Container onde o grafo será renderizado -->
+        <div id="cy"></div>
+
+        <!-- CDN do Cytoscape.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.30.0/cytoscape.min.js"></script>
+
+        <script type="module" src="{% static 'js/graph/core.js' %}"></script>
+
+    </body>
+</html>
